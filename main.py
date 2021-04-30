@@ -37,16 +37,11 @@ def cov(x,y):
 def var(v):
     return  cov(v,v)
 
-# def a(x,y):
-#     return cov(x,y)/var(x)
-#
-# def b(x,y):
-#     return moy(x) - a*moy(y)
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    print(multpl([2,2,2] , [3,5,3]))
+    print(cov([2,2,2] , [3,5,3]))
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
