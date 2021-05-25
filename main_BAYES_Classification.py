@@ -6,8 +6,9 @@ de un cas de pré-detection de mauvais commentaires de consomateurs
 
 # coding=utf-8
 # Importation de la bibliothèque Pandas pour la lecture du fichier .csv
-import pandas as pnd
+from __future__ import division
 
+import pandas as pnd
 # Fonction permettant de lire un fichier .csv et retourne le contenu du fichier sous le format DataFrame de Pandas
 from pandas import DataFrame
 
@@ -45,7 +46,7 @@ def neg_probability(data) : # cls for class
 # Fonction main :
 if __name__ == '__main__':
     # Lecture du fichier CSV contenant la base de donnée :
-    data = readCSVfile("BaseAvisConsomateurs.csv")
+    data = readCSVfile("BaseAvisConsomateurs.csv");
     #print("Voici un aperçu des 3 premières lignes du fichier : \n")
     #print(data.head(3))
 
@@ -55,5 +56,4 @@ if __name__ == '__main__':
 df = DataFrame(dataList, columns=['Quality', 'Livraison', 'ProduitConforme', 'Classe'])
 
 #les probabilités à priori de chaque caractéristique
-print(neg_probability(df) )
 
