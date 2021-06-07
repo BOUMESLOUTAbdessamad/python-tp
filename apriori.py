@@ -38,7 +38,7 @@ def GetOneItemFrequences(transactions, itemsList, minsup) :
                 freq += 1;
 
         supp = freq/len(transactions)
-        if supp > minsup :
+        if supp >= minsup :
             result[item] = round(supp, 2)
 
     return result
